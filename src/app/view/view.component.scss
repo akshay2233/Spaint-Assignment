@@ -1,0 +1,22 @@
+img{
+    background-color: #F1F4F7;
+}
+.imge-holder{
+    padding: 20px;
+}
+.keyname{
+    font-weight: bold;
+}
+.card-title{
+    color: #2d2d90;
+}
+
+.valuename{
+    color: #408cde;
+}
+.view-holder{
+    max-height: 83vh;overflow: auto;min-height: 83vh;
+    .card{
+        height: 100%;width: 100%;
+    }
+}

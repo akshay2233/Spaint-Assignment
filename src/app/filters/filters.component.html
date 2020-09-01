@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Filters</h5>
+        <div class="filter-content">
+            <div class="filter-header">
+                <span>Launch Year</span>
+                <hr>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-12 col-md-12 col-lg-6 button-holder" *ngFor="let item of years">
+                    <span class="year-button" (click)="onSubmitFilter('year',item)"
+                        [ngStyle]="{'background-color': selectedFilters.year == item ? 'green' : ''}">
+                    {{item}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="filter-content">
+            <div class="filter-header">
+                <span>Successful Launch</span>
+                <hr>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-12 col-md-12 col-lg-6 button-holder">
+                    <span   (click)="onSubmitFilter('isLaunch',true)"  [ngStyle]="{'background-color': selectedFilters.isLaunch == true ? 'green' : ''}" class="year-button">True</span>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6 button-holder">
+                    <span  (click)="onSubmitFilter('isLaunch',false)" [ngStyle]="{'background-color': selectedFilters.isLaunch == false ? 'green' : ''}" class="year-button">False</span>
+                </div>
+            </div>
+        </div>
+        <div class="filter-content">
+            <div class="filter-header">
+                <span>Successful Landing</span>
+                <hr>
+            </div>
+            <div class="row mt-2">
+                <div class="col-sm-12 col-md-12 col-lg-6 button-holder">
+                    <span   (click)="onSubmitFilter('isLanding',true)"  [ngStyle]="{'background-color': selectedFilters.isLanding == true ? 'green' : ''}" class="year-button">True</span>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6 button-holder">
+                    <span  (click)="onSubmitFilter('isLanding',false)" [ngStyle]="{'background-color': selectedFilters.isLanding == false ? 'green' : ''}" class="year-button">False</span>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>

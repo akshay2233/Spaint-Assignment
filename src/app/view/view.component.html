@@ -1,0 +1,41 @@
+<div style="text-align: center;width: 100%;" *ngIf="isLoading">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<div *ngIf="!isLoading">
+
+    <div class="row view-holder">
+        <div class="col-sm-12 col-md-6 col-lg-3 mb-2" *ngFor="let item of lstDetails">
+            <div class="card" >
+                <div class="imge-holder">
+                    <img class="card-img-top" [src]="item.links.mission_patch" alt="Card image cap">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{item.mission_name}}#{{item.flight_number}}</h5>
+                    <span class="keyname">Mission Ids:</span>
+                    <ul>
+                        <li class="valuename" *ngFor="let ids of item.mission_id">{{ids}}</li>
+                    </ul>
+                    <div>
+                        <span class="keyname">Launch Year: </span><span class="valuename">{{item.launch_year}}</span>
+                    </div>
+                    <div>
+                        <span class="keyname">Successful Launch: </span><span
+                            class="valuename">{{item.launch_success}}</span>
+
+                    </div>
+                    <div>
+                        <span class="keyname">Successful Landing: </span><span
+                            class="valuename">{{item.launch_landing}}</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div *ngIf="!isLoading" style="width: 100%;text-align: center;margin:20px;">
+    <h4>Developed By :Akshay K N</h4>
+</div>
